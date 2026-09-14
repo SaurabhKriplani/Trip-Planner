@@ -1,0 +1,426 @@
+/* ========================================
+   GLOBAL ANIMATIONS & TRANSITIONS
+   ======================================== */
+
+/* ─────────────────────────────────────
+   FADE & SLIDE ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ─────────────────────────────────────
+   LETTER & TEXT ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes letterSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─────────────────────────────────────
+   BUTTON & HOVER ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(130, 144, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(130, 144, 255, 0.8);
+  }
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(236, 158, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 158, 255, 0.6);
+  }
+}
+
+/* ─────────────────────────────────────
+   LOADING ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* ─────────────────────────────────────
+   CARD ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes cardScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shineEffect {
+  0% {
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: inset 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* ─────────────────────────────────────
+   PARALLAX ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes parallaxFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ─────────────────────────────────────
+   UTILITY CLASSES
+   ───────────────────────────────────── */
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.fade-in-slow {
+  animation: fadeIn 1s ease-out;
+}
+
+.slide-up {
+  animation: slideInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slide-up-slow {
+  animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slide-down {
+  animation: slideInDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slide-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.slide-right {
+  animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Stagger delays for child elements */
+.stagger-delay-1 {
+  animation-delay: 0.05s;
+}
+
+.stagger-delay-2 {
+  animation-delay: 0.1s;
+}
+
+.stagger-delay-3 {
+  animation-delay: 0.15s;
+}
+
+.stagger-delay-4 {
+  animation-delay: 0.2s;
+}
+
+.stagger-delay-5 {
+  animation-delay: 0.25s;
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smooth-transition-fast {
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smooth-transition-slow {
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scale on hover */
+.scale-on-hover {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms ease;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow effects */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(130, 144, 255, 0.5);
+}
+
+.glow-effect-hover:hover {
+  box-shadow: 0 0 30px rgba(130, 144, 255, 0.8);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  animation: spin 1.5s linear infinite;
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Button specific */
+.gradient-button {
+  background: linear-gradient(90deg, #8290ff, #ec9eff, #fc7a7a);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.button-glow {
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+/* Shadowing on scroll */
+.shadow-on-scroll {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ─────────────────────────────────────
+   THEME TOGGLE ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes toggleSwitch {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(24px);
+  }
+}
+
+@keyframes toggleSwitchReverse {
+  from {
+    transform: translateX(24px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.toggle-switch {
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+.toggle-circle {
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-circle.active {
+  animation: toggleSwitch 300ms ease forwards;
+}
+
+.toggle-circle.inactive {
+  animation: toggleSwitchReverse 300ms ease forwards;
+}
+
+/* ─────────────────────────────────────
+   DARK MODE TRANSITIONS
+   ───────────────────────────────────── */
+
+body {
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* Light theme */
+body.light-theme {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Dark theme (default) */
+body.dark-theme {
+  background-color: #0a0e27;
+  color: #ffffff;
+}
+
+/* ─────────────────────────────────────
+   FORM ANIMATIONS
+   ───────────────────────────────────── */
+
+@keyframes inputFocus {
+  from {
+    box-shadow: 0 0 0 0 rgba(130, 144, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 15px rgba(130, 144, 255, 0.5);
+  }
+}
+
+.form-input-focus {
+  animation: inputFocus 300ms ease;
+}
+
+/* Card selection animation */
+@keyframes cardSelect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.card-selected {
+  animation: cardSelect 250ms ease;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE ADJUSTMENTS
+   ───────────────────────────────────── */
+
+@media (prefers-reduced-motion: prefer-reduced-motion) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* For better performance on mobile */
+@media (max-width: 768px) {
+  .parallaxFloat {
+    animation: none;
+  }
+
+  .slide-up,
+  .slide-down,
+  .slide-left,
+  .slide-right {
+    animation-duration: 0.4s;
+  }
+}

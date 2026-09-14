@@ -1,0 +1,359 @@
+/* ========================================
+   THEME COLORS - LIGHT & DARK MODES
+   ======================================== */
+
+/* Dark Theme (Default) */
+:root.dark-theme,
+body.dark-theme {
+  /* Background colors */
+  --bg-primary: #0a0e27;
+  --bg-secondary: #1a1f3a;
+  --bg-tertiary: #2a2f4a;
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0c0;
+  --text-muted: #808080;
+
+  /* Accent colors */
+  --accent-primary: #8290ff;
+  --accent-secondary: #ec9eff;
+  --accent-tertiary: #fc7a7a;
+  --accent-light: #a6e3f7;
+
+  /* Border colors */
+  --border-primary: #8290ff;
+  --border-secondary: #2a2f4a;
+
+  /* Glow colors */
+  --glow-color: rgba(130, 144, 255, 0.5);
+
+  /* Input styles */
+  --input-bg: #1a1f3a;
+  --input-border: #2a2f4a;
+  --input-text: #ffffff;
+  --input-placeholder: #808080;
+
+  /* Card styles */
+  --card-bg: #1a1f3a;
+  --card-border: #2a2f4a;
+  --card-hover-bg: rgba(130, 144, 255, 0.1);
+
+  /* Button styles */
+  --button-text: #ffffff;
+  --button-hover-shadow: rgba(130, 144, 255, 0.5);
+}
+
+/* Light Theme */
+:root.light-theme,
+body.light-theme {
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+
+  /* Text colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #9a9a9a;
+
+  /* Accent colors */
+  --accent-primary: #5b7cff;
+  --accent-secondary: #d97ddb;
+  --accent-tertiary: #ff6b5b;
+  --accent-light: #3ca9e8;
+
+  /* Border colors */
+  --border-primary: #d0d0d0;
+  --border-secondary: #e0e0e0;
+
+  /* Glow colors */
+  --glow-color: rgba(91, 124, 255, 0.3);
+
+  /* Input styles */
+  --input-bg: #f8f9fa;
+  --input-border: #d0d0d0;
+  --input-text: #1a1a1a;
+  --input-placeholder: #9a9a9a;
+
+  /* Card styles */
+  --card-bg: #f8f9fa;
+  --card-border: #e0e0e0;
+  --card-hover-bg: rgba(91, 124, 255, 0.05);
+
+  /* Button styles */
+  --button-text: #ffffff;
+  --button-hover-shadow: rgba(91, 124, 255, 0.4);
+}
+
+/* Apply theme colors to common elements */
+
+/* Background transitions */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Input fields */
+input,
+textarea,
+.input,
+.form-control {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-border);
+  transition: all 300ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+input:focus,
+textarea:focus,
+.input:focus,
+.form-control:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Cards and containers */
+.card,
+.container,
+[role="card"] {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  transition: all 300ms ease;
+}
+
+.card:hover,
+[role="card"]:hover {
+  background-color: var(--card-hover-bg);
+  box-shadow: 0 4px 12px var(--glow-color);
+}
+
+/* Text colors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+p,
+span,
+a {
+  color: var(--text-secondary);
+}
+
+a {
+  transition: color 250ms ease;
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
+/* Buttons */
+button,
+.button,
+[role="button"] {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--button-text);
+}
+
+/* Links */
+.link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.link:hover {
+  color: var(--accent-secondary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Selection colors */
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-secondary);
+}
+
+/* Dividers */
+hr,
+.divider {
+  border-color: var(--border-secondary);
+}
+
+/* Smooth transitions for all theme-dependent colors */
+* {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+/* Optimize transitions for interactive elements */
+button,
+a,
+input,
+textarea,
+select {
+  transition-duration: 200ms;
+}
+
+/* Headers and nav */
+header,
+nav,
+.header,
+.navbar {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+
+  color: white;
+  transition: all 300ms ease;
+}
+
+/* ========================================
+   @THEME-TOGGLES CUSTOMIZE EXPAND
+   ======================================== */
+
+/* Dark Theme - Expand Toggle */
+:root.dark-theme,
+body.dark-theme {
+  --tt-toggle-text: #ffffff;
+  --tt-toggle-bg: #1a1f3a;
+  --tt-toggle-icon-color: #8290ff;
+  --tt-toggle-handle-bg: linear-gradient(135deg, #8290ff, #ec9eff);
+}
+
+/* Light Theme - Expand Toggle */
+:root.light-theme,
+body.light-theme {
+  --tt-toggle-text: #1a1a1a;
+  --tt-toggle-bg: #f0f4ff;
+  --tt-toggle-icon-color: #5b7cff;
+  --tt-toggle-handle-bg: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+/* Custom styling for @theme-toggles Expand component */
+.tt__expand {
+  color: var(--tt-toggle-icon-color);
+  transition: all 300ms ease;
+}
+
+.tt__expand svg {
+  stroke: var(--tt-toggle-icon-color);
+  fill: var(--tt-toggle-icon-color);
+  transition: stroke 300ms ease, fill 300ms ease;
+}
+
+.tt__expand:hover svg {
+  opacity: 0.8;
+}
+
+/* For light theme, use a lighter gradient */
+:root.light-theme header,
+:root.light-theme nav,
+:root.light-theme .header,
+:root.light-theme .navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(91, 124, 255, 0.9),
+    rgba(217, 125, 219, 0.9),
+    rgba(255, 107, 91, 0.9)
+  );
+}
+
+/* Hover state for interactive elements */
+button:hover,
+.button:hover,
+[role="button"]:hover,
+.interactive:hover {
+  box-shadow: 0 6px 20px var(--glow-color);
+  transform: translateY(-2px);
+}
+
+/* Focus state for accessibility */
+button:focus,
+.button:focus,
+[role="button"]:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading,
+.spinner {
+  color: var(--accent-primary);
+  border-color: var(--border-secondary);
+  border-top-color: var(--accent-primary);
+}
+
+/* Success/Error/Warning states */
+.success {
+  color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+  border-color: #28a745;
+}
+
+.error,
+.danger {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
+}
+
+.warning {
+  color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.1);
+  border-color: #ffc107;
+}
+
+/* Dark theme specific tweaks */
+body.dark-theme {
+  background-attachment: fixed;
+}
+
+/* Light theme specific tweaks */
+body.light-theme {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
