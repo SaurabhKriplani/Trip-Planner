@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # 🌍 Fravel - AI Trip Planner
@@ -474,3 +475,6 @@ If you find this project useful or interesting, please consider giving it a star
 **Happy Travels! 🌍✈️🗺️**
 
 </div>
+=======
+# Trip-Planner
+>>>>>>> 77f9e76f96c67cecdd2ec461e23dc683e92b80a5
